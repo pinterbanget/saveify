@@ -11,7 +11,7 @@ clientId = 'dqw4w9wgxcq' #change with your Client ID from Spotify app
 clientSecret = 'd1YBv2mWll0' #change with your Client Secret from Spotify app
 directory = r"D:\blablabla\yaddayadda" #change with your destination directory. don't use spaces
 ffmpegDir = r"D:\FFmpeg\bin" #change with your FFmpeg directory. don't use spaces
-username = '085700088839' #change with your Spotify username.
+profileUri = 'spotify:username:085700088839' #change with your Spotify profile URI.
 playlistUri = 'spotify:playlist:0RGOFtQCYhoPnzZdhRcgpQ' #change with your Spotify playlist URI.
 #YOU ONLY WANT TO CHANGE THINGS ABOVE THIS
 
@@ -22,7 +22,8 @@ def getSongTitle(uri, uname):
     global playlistName, songList, playlistTitles, playlistArtists, playlistDurations
     
     playlistId = uri.split(':')[2]
-    playlist = sp.user_playlist(uname, playlistId)
+    username = uname.split(':')[2]
+    playlist = sp.user_playlist(username, playlistId)
     
     playlistData = playlist['tracks']
     playlistName = playlist['name']
@@ -75,4 +76,4 @@ def downloadSongs(songList):
         metatag.save()
 
 if __name__ == '__main__':
-    getSongTitle(playlistUri, username)
+    getSongTitle(playlistUri, profileUri)
