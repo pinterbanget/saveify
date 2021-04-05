@@ -14,9 +14,9 @@ by using this, you agree to ONLY USE THIS TO DOWNLOAD PLAYLISTS YOU HAVE THE RIG
 1) change **clientID** (Client ID) and **clientSecret** (Client Secret) to the one you have in your Spotify app
 2) change **ffmpegDir** to where you downloaded FFmpeg (note: use the bin folder for the complete directory. for example: C:\FFmpeg\bin). i recommend to put this right on the C:\ or D:\ directory.
 3) change **directory** to where you want the files to be downloaded. **DON'T USE SPACES!**
-4) change **username** to your Spotify username
-5) change **playlistUri** to the playlist URI you want to download
-6) save and run!
+4) change **usernameUri** to your Spotify profile URI.
+6) change **playlistUri** to the playlist URI you want to download.
+7) save and run!
 
 # known bugs
 - can't rename certain songs with special characters in them
