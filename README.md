@@ -1,6 +1,9 @@
 # saveify
 a small project to scrape songs on a Spotify playlist, searches them on YouTube, and downloads them. runs on Python 3.8+.
 
+# usage agreement
+by using this, you agree to ONLY USE THIS TO DOWNLOAD PLAYLISTS YOU HAVE THE RIGHTS TO. i am NOT responsible if some DMCA guy knocks your front door because you decide to download the latest Justin Bieber hit.
+
 # prerequirements
 - have FFmpeg installed [(go here)](https://ffmpeg.org/download.html)
 - have the following modules installed: *spotipy*, *mutagen*, *youtube_dl*
