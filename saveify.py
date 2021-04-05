@@ -18,11 +18,11 @@ playlistUri = 'spotify:playlist:0RGOFtQCYhoPnzZdhRcgpQ' #change with your Spotif
 clientCredents = SpotifyClientCredentials(client_id = clientId, client_secret = clientSecret)
 sp = spotipy.Spotify(client_credentials_manager = clientCredents)
 
-def getSongTitle(uri):
+def getSongTitle(uri, uname):
     global playlistName, songList, playlistTitles, playlistArtists, playlistDurations
     
     playlistId = uri.split(':')[2]
-    playlist = sp.user_playlist(username, playlistId)
+    playlist = sp.user_playlist(uname, playlistId)
     
     playlistData = playlist['tracks']
     playlistName = playlist['name']
@@ -75,4 +75,4 @@ def downloadSongs(songList):
         metatag.save()
 
 if __name__ == '__main__':
-    getSongTitle(playlistUri)
+    getSongTitle(playlistUri, username)
